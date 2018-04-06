@@ -25,7 +25,7 @@ class GameScene: SKScene {
     let leftCarMaximumX :CGFloat = -100
     
     let rightCarMinimumX :CGFloat = 100
-    let rightCarMaximumX :CGFloat = 200
+    let rightCarMaximumX :CGFloat = 280
     
     override func didMove(to view: SKView) {
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
@@ -64,6 +64,7 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         if canMove {
             move(leftSide:leftToMoveLeft)
+            moveRightCar(rightSide: rightCarToMoveRight)
         }
         showRoadStrip()
     }
