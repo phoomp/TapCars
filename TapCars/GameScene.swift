@@ -27,6 +27,8 @@ class GameScene: SKScene {
     let rightCarMinimumX :CGFloat = 100
     let rightCarMaximumX :CGFloat = 200
     
+    var roadStrip: [SKShapeNode] = []
+    
     override func didMove(to view: SKView) {
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         setUp()
